@@ -1,8 +1,7 @@
 import arcpy
 arcpy.env.overwriteOutput = True
 
-#Set feature classes
-sde = r"C:\Users\djacosta\AppData\Roaming\ESRI\Desktop10.2\ArcCatalog\Connection to cno-sqlcst01.sde"
+sde = r"C:\Users\djacosta\AppData\Roaming\ESRI\Desktop10.2\ArcCatalog\Connection to cno-sqldev05.sde\CNOGIS.CNOGISOWNER.Economic_Development"
 nola_parcels = r"C:\Users\djacosta\Desktop\temp\hdlc_sandbox\data.gdb\nola_parcels"
 hdlc_parcels = r"C:\Users\djacosta\Desktop\temp\hdlc_sandbox\data.gdb\hdlc_parcels_v1"
 hdlc_features = r"C:\Users\djacosta\Desktop\temp\hdlc_sandbox\data.gdb\hdlc_features"
@@ -38,7 +37,7 @@ arcpy.SelectLayerByAttribute_management('nola_parcels_layer_join', "NEW_SELECTIO
 
 arcpy.CopyFeatures_management('nola_parcels_layer_join', hdlc_parcels)
 
-
+arcpy.FeatureClassToFeatureClass_conversion (hdlc_parcels, sde, "hdlc_parcels_djacosta_test_v1")
 
 
 
