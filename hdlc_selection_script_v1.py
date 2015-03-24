@@ -9,7 +9,7 @@ hdlc_features_buffer = r"C:\Users\djacosta\Desktop\temp\hdlc_sandbox\data.gdb\hd
 points = r"C:\Users\djacosta\Desktop\temp\hdlc_sandbox\data.gdb\points"
 
 #Fetch points from AGO
-baseURL = "http://services.arcgis.com/VhMjCzR3cIjEkh7L/arcgis/rest/services/historic_landmarks_v1/FeatureServer/0/query"
+baseURL = "http://services.arcgis.com/VhMjCzR3cIjEkh7L/arcgis/rest/services/historic_landmarks_v3/FeatureServer/0/query"
 where = '1=1'
 fields ='*'
 token = ''
